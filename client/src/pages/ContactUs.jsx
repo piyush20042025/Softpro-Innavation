@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import axios from 'axios'
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', category: '', message: '' })
@@ -18,15 +19,22 @@ const Contact = () => {
   }, [])
 
   const handleChange = (e) => setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }))
-
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setLoading(true)
-    await new Promise(r => setTimeout(r, 1200)) // simulate request
+  
+const handleSubmit = async (e) => {
+  e.preventDefault()
+  setLoading(true)
+  try {
+    const res = await axios.post('http://localhost:5000/api/complaint', formData)
+    if (res.data.msg === 'Message sent successfully') {
+      setSuccess(true)
+      setFormData({ name: '', email: '', subject: '', category: '', message: '' })
+    }
+  } catch (err) {
+    console.error(err)
+  } finally {
     setLoading(false)
-    setSuccess(true)
-    setFormData({ name: '', email: '', subject: '', category: '', message: '' })
   }
+}
 
   return (
     <>
@@ -63,7 +71,7 @@ const Contact = () => {
                   </h3>
 
                   <div className="contact-info-item">
-                    <div className="contact-info-icon">📍</div>
+                    <div className="contact-info-icon"><i className="fas fa-map-marker-alt"></i></div>
                     <div>
                       <div className="contact-info-label">Address</div>
                       <div className="contact-info-val">Softpro House <br />
@@ -74,7 +82,7 @@ const Contact = () => {
                   </div>
 
                   <div className="contact-info-item">
-                    <div className="contact-info-icon">📞</div>
+                    <div className="contact-info-icon"><i className="fa-solid fa-phone"></i></div>
                     <div>
                       <div className="contact-info-label">Phone</div>
                       <div className="contact-info-val">
@@ -84,7 +92,7 @@ const Contact = () => {
                   </div>
 
                   <div className="contact-info-item">
-                    <div className="contact-info-icon">✉️</div>
+                    <div className="contact-info-icon"><i className="fa-solid fa-envelope"></i></div>
                     <div>
                       <div className="contact-info-label">Email</div>
                       <div className="contact-info-val">
@@ -94,7 +102,7 @@ const Contact = () => {
                   </div>
 
                   <div className="contact-info-item">
-                    <div className="contact-info-icon">🕐</div>
+                    <div className="contact-info-icon"><i className="fa-solid fa-clock"></i></div>
                     <div>
                       <div className="contact-info-label">Business Hours</div>
                       <div className="contact-info-val">Mon – Sat: 9:00 AM – 7:00 PM</div>

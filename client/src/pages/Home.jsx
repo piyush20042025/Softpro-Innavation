@@ -314,6 +314,7 @@ const Home = () => {
                         </button>
                       </div>
                     </div>
+                    
                     {/* Info area */}
                     <div className="si-prod-body">
                       {/* category can be a populated object OR a plain string */}

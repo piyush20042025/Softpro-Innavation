@@ -77,8 +77,8 @@ const Register = () => {
 
         {/* Brand */}
         <div className="auth-logo-row">
-          <div className="auth-logo-mark">S</div>
-          <div className="auth-brand">Softpro<span>Innovation</span></div>
+          <div className="auth-logo-mark">EH</div>
+          <div className="auth-brand">Electronic Hub</div>
         </div>
 
         {/* Card */}
@@ -106,7 +106,7 @@ const Register = () => {
                   name="name"
                   value={formData.name}
                   onChange={handleChange}
-                  placeholder="Arjun Sharma"
+                  placeholder="Enter your full name"
                   required
                   autoComplete="name"
                 />
@@ -136,7 +136,7 @@ const Register = () => {
                 name="email"
                 value={formData.email}
                 onChange={handleChange}
-                placeholder="you@example.com"
+                placeholder="email@example.com"
                 required
                 autoComplete="email"
               />

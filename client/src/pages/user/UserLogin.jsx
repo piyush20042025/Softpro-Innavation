@@ -75,8 +75,8 @@ const Login = () => {
 
         {/* Brand */}
         <div className="auth-logo-row">
-          <div className="auth-logo-mark">S</div>
-          <div className="auth-brand">Softpro<span>Innovation</span></div>
+          <div className="auth-logo-mark">EH</div>
+          <div className="auth-brand">Electronic Hub</div>
         </div>
 
         {/* Card */}

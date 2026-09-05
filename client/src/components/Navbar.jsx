@@ -66,8 +66,8 @@ const Navbar = () => {
 
         {/* Brand */}
         <Link to="/" className="navbar-brand-wrap">
-          <div className="brand-logo">S</div>
-          <div className="brand-name">Softpro<span>Innovation</span></div>
+          <div className="brand-logo">EH</div>
+          <div className="brand-name">Electronic Hub</div>
         </Link>
 
         {/* Mobile: theme + hamburger */}

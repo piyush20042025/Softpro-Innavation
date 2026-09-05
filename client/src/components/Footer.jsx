@@ -79,7 +79,8 @@ const Footer = () => {
           <div className="col-lg-3 col-md-6">
             <div className="footer-col-title">Get in Touch</div>
             <div className="footer-contact-item">
-              <span className="icon"><i class="fa-solid fa-map-pin"></i></span>
+              <span className="icon">
+              <i className="fas fa-map-marker-alt"></i></span>
               <p>
                 Softpro House <br />
                 3/213, Sec-J, Jankipuram, Kursi Road <br />
@@ -88,15 +89,15 @@ const Footer = () => {
                 </p>
             </div>
             <div className="footer-contact-item">
-              <span className="icon"><i class="fa-solid fa-phone"></i></span>
+              <span className="icon"><i className="fa-solid fa-phone"></i></span>
               <p><a href="tel:+916391276203">+91 63912 76203</a></p>
             </div>
             <div className="footer-contact-item">
-              <span className="icon">✉️</span>
+              <span className="icon"><i className="fa-solid fa-envelope"></i></span>
               <p><a href="mailto:info@softproinnovation.com">info@softproinnovation.com</a></p>
             </div>
             <div className="footer-contact-item">
-              <span className="icon">🕐</span>
+              <span className="icon"><i className="fa-solid fa-clock"></i></span>
               <p>Mon – Sat: 9:00 AM – 7:00 PM</p>
             </div>
           </div>

@@ -12,12 +12,12 @@ const VALUES = [
   { icon: '💡', title: 'Continuous Learning',  desc: 'Free project tutorials, wiring guides, and datasheets ship with every order.' },
 ]
 
-const TEAM = [
-  { initials: 'AK', name: 'Aman Kumar',     role: 'Founder & CEO',          bio: 'Embedded systems engineer with 12 years of experience in IoT product development.' },
-  { initials: 'PS', name: 'Priya Singh',    role: 'Head of Operations',     bio: 'Supply chain expert ensuring 99.8% order accuracy and on-time delivery.' },
-  { initials: 'RV', name: 'Rahul Verma',    role: 'Lead Hardware Engineer', bio: 'Open-source contributor and Raspberry Pi certified developer.' },
-  { initials: 'NA', name: 'Nisha Agarwal',  role: 'Customer Experience',    bio: 'Dedicated to making every maker feel heard and supported throughout their journey.' },
-]
+// const TEAM = [
+//   { initials: 'AC', name: 'Er. Ajay Chaudhary',     role: 'Founder & CEO',          bio: 'Embedded systems engineer with 12 years of experience in IoT product development.' },
+//   { initials: 'Y', name: 'Yashi',    role: 'Head of Operations',     bio: 'Supply chain expert ensuring 99.8% order accuracy and on-time delivery.' },
+//   { initials: 'AM', name: 'Akash Maurya',    role: 'Lead Hardware Engineer', bio: 'Open-source contributor and Raspberry Pi certified developer.' },
+//   { initials: 'NA', name: 'Nisha Agarwal',  role: 'Customer Experience',    bio: 'Dedicated to making every maker feel heard and supported throughout their journey.' },
+// ]
 
 const TIMELINE = [
   { year: '2018', event: 'Founded in a small garage in Lucknow with 200 SKUs and a dream.' },
@@ -157,7 +157,7 @@ const About = () => {
       </section>
 
       {/* Team */}
-      <section className="si-section si-section-alt">
+      {/* <section className="si-section si-section-alt">
         <div className="container">
           <div className="text-center mb-5 fade-up">
             <span className="section-eyebrow">The People Behind It</span>
@@ -177,10 +177,10 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* CTA */}
-      <section className="si-section">
+      <section className="si-section si-section-alt">
         <div className="container text-center fade-up">
           <span className="section-eyebrow">Ready to Build?</span>
           <h2 className="section-title" style={{ marginBottom: '1.5rem' }}>
