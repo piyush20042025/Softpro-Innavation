@@ -25,7 +25,7 @@ router.post('/login', async(req,res)=>{
 
     }
     if(a.password==password){
-        const token = jwt.sign({id:a._id},process.env.jWT_SECRET,{expiresIn:"30d"})
+        const token = Jwt.sign({id:a._id},process.env.jWT_SECRET,{expiresIn:"30d"})
         return res.json({
             msg:"Login Successfully",
             id:a._id,
