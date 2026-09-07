@@ -52,7 +52,7 @@ const Adminlogin = () => {
     setLoading(true)
     setError('')
     try {
-      const res = await axios.post('http://localhost:5000/api/admin/login', formData)
+      const res = await axios.post('https://softpro-innavation.onrender.com/api/admin/login', formData)
       if (res.data.msg === 'Login Successfully') {
         localStorage.setItem('id',    res.data.id)
         localStorage.setItem('token', res.data.token)

@@ -22,7 +22,7 @@ const AddCategory = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://localhost:5000/api/category', data, {
+            const res = await axios.post('https://softpro-innavation.onrender.com/api/category', data, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

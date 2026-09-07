@@ -27,7 +27,7 @@ const Address = () => {
   /* ── Fetch addresses ── */
   const fetchAddresses = async () => {
     try {
-      const res  = await axios.get(`http://localhost:5000/api/address/${userId}`)
+      const res  = await axios.get(`https://softpro-innavation.onrender.com/api/address/${userId}`)
       const data = res.data.data || []
       setAddresses(data)
       if (data.length > 0) setSelected(data[0]._id)
@@ -50,7 +50,7 @@ const Address = () => {
     setSaving(true)
     setAlert(null)
     try {
-      await axios.post('http://localhost:5000/api/address', {
+      await axios.post('https://softpro-innavation.onrender.com/api/address', {
         userId,
         houseNo: form.houseNo,
         pincode: form.pincode,
@@ -72,7 +72,7 @@ const Address = () => {
   const handleDelete = async (addrId) => {
     setDeleting(addrId)
     try {
-      await axios.delete(`http://localhost:5000/api/address/${addrId}`)
+      await axios.delete(`https://softpro-innavation.onrender.com/api/address/${addrId}`)
       const updated = addresses.filter(a => a._id !== addrId)
       setAddresses(updated)
       if (selected === addrId) setSelected(updated[0]?._id || null)
@@ -108,7 +108,7 @@ const Address = () => {
     setPlacing(true)
     setAlert(null)
     try {
-      const res = await axios.post('http://localhost:5000/api/order/order/cart', {
+      const res = await axios.post('https://softpro-innavation.onrender.com/api/order/order/cart', {
         userId,                    // localStorage se
         paymentMethod,             // 'cod' or 'online' — Order schema enum
         transactionId: paymentMethod === 'online' ? transactionId.trim() : null,

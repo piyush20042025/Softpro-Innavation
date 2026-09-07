@@ -43,7 +43,7 @@ const AddProduct = () => {
   const fetchData = async () => {
     if (id) {
       try {
-        const res = await axios.get(`http://localhost:5000/api/product/${id}`);
+        const res = await axios.get(`https://softpro-innavation.onrender.com/api/product/${id}`);
         setData(res.data.data);
       } catch (err) {
         console.log(err);
@@ -78,14 +78,14 @@ const AddProduct = () => {
 
     try {
       if (!isEdit) {
-        const res = await axios.post("http://localhost:5000/api/product", data, {
+        const res = await axios.post("https://softpro-innavation.onrender.com/api/product", data, {
           headers: {
             "Content-Type": "multipart/form-data"
           }
         });
          console.log(res.data);
       } else {
-        const res = await axios.put(`http://localhost:5000/api/product/${id}`, data);
+        const res = await axios.put(`https://softpro-innavation.onrender.com/api/product/${id}`, data);
         console.log(res.data);
 
       }
@@ -98,7 +98,7 @@ const AddProduct = () => {
 
   const handleCategory = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/category");
+      const res = await axios.get("https://softpro-innavation.onrender.com/api/category");
       setCategory(res.data.data);
     } catch (err) {
       console.log(err);

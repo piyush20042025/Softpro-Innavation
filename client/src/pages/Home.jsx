@@ -96,8 +96,8 @@ const Home = () => {
     const fetchData = async () => {
       try {
         const [catRes, prodRes] = await Promise.all([
-          axios.get('http://localhost:5000/api/category/home'),
-          axios.get('http://localhost:5000/api/product/products'),
+          axios.get('https://softpro-innavation.onrender.com/api/category/home'),
+          axios.get('https://softpro-innavation.onrender.com/api/product/products'),
         ])
         setCategories(catRes.data.data  || [])
         setProducts(prodRes.data.data   || [])
@@ -226,7 +226,7 @@ const Home = () => {
                     <div className="si-cat-card">
                       <div className="si-cat-img-wrap">
                         <img
-                          src={`http://localhost:5000/api/category/${cat.picture.replace(/\\/g, '/').split('/').pop()}`}
+                          src={`https://softpro-innavation.onrender.com/api/category/${cat.picture.replace(/\\/g, '/').split('/').pop()}`}
                           alt={cat.category}
                           className="si-cat-img"
                           onError={e => { e.target.style.display = 'none' }}
@@ -280,7 +280,7 @@ const Home = () => {
                     <div className="si-prod-img-wrap">
                       {product.images ? (
                         <img
-                          src={`http://localhost:5000/api/product/${product.images.replace(/\\/g, '/').split('/').pop()}`}
+                          src={`https://softpro-innavation.onrender.com/api/product/${product.images.replace(/\\/g, '/').split('/').pop()}`}
                           alt={product.name}
                           className="si-prod-img"
                           onError={e => { e.target.style.display = 'none' }}

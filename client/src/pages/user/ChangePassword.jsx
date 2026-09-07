@@ -57,7 +57,7 @@ const ChangePassword = () => {
     try {
       // PATCH /api/user/change-password/:id — backend route ke hisab se
       const res = await axios.patch(
-        `http://localhost:5000/api/user/change-password/${localStorage.getItem('id')}`,
+        `https://softpro-innavation.onrender.com/api/user/change-password/${localStorage.getItem('id')}`,
         {
           oldPassword: form.current,
           newPassword: form.newPwd,
